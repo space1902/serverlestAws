@@ -1,0 +1,12 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0  # Verifica la última versión
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: sonarlint
+        args: [ '--src', 'src/main/java' ]
+      - id: spotless-check
+      - id: spotless-apply
+      - id: dependency-check
+        args: ['--project', 'lambda-enlaceoperativo']
