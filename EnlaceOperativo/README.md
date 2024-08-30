@@ -13,6 +13,7 @@ upload tasks.
 - [DataBase](#database)
 - [Testing](#testing)
 - [Coverage](#coverage)
+- [PreCommit](#precommit)
 - [API Documentation](#api-documentation)
 
 ## Requirements
@@ -73,7 +74,7 @@ docker run -p 8080:8080 enlace-operativo:latest
 
 ## Database
 
-You can set up a PostgreSQL database using Docker. Below, I provide you with the steps to create 
+You can set up a PostgreSQL database using Docker. Below, I provide you with the steps to create
 a container with PostgreSQL.
 
 1. Create a Docker image with PostgreSQL:
@@ -121,6 +122,23 @@ mvn test
 mvn verify
 ```
 
+## PreCommit
+
+1. you need to install the pre-commit tool on your system. You can install it through pip if you have Python installed:
+
+```bash
+pip install pre-commit
+```
+
+2. Create the .pre-commit-config.yaml file in the root of your project. This file will define the hooks you want to run before each commit. A basic example would be:
+
+3. Install the hooks you configured in .pre-commit-config.yaml by running the following command in the root of the project:
+
+4. Manually execute pre-commit
+
+```bash
+pre-commit run --all-files
+```
 ## API Documentation
 
 The project includes Swagger for API documentation. Once the application is running, you can access the Swagger UI at:
